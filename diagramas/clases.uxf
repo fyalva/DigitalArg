@@ -1,0 +1,92 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>260</x><y>0</y><w>150</w><h>160</h></coordinates><panel_attributes>CuentaPesos
+--
+idCuentaPesos
+idUsuario
+numeroCuenta
+CVU
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>30</x><y>0</y><w>150</w><h>160</h></coordinates><panel_attributes>Usuario
+--
+idUsuario
+dni
+apellido
+nombre
+domicilio
+imgDniFrente
+imgDniAtras
+passwordHash</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>720</x><y>590</y><w>150</w><h>170</h></coordinates><panel_attributes>Monedas
+--
+idMoneda
+nombreMoneda
+     (Peso, Real, Dólar...)
+simboloMoneda
+     (AR$, BR$, U$D...)
+cotizaciónVenta
+cotizaciónCompra
+esCriptomoneda
+     (true / false)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>30</x><y>290</y><w>150</w><h>230</h></coordinates><panel_attributes>OperacionPesos
+--
+idOperacionPesos
+nombre
+     (Ingreso de dinero,
+      Retiro de dinero,
+      Giro en descubierto,
+      Pago de servicios,
+      Transferencia,
+      Plazo fijo,
+      Inversión FCI,
+      Moneda extranjera,
+      Criptomonedas...)
+esDebito
+     (true / false)
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>490</x><y>590</y><w>150</w><h>160</h></coordinates><panel_attributes>MovimientoMoneda
+--
+idMovimientoMoneda
+idMovimientoPesos
+fecha
+idMoneda
+idOperacionMoneda
+importeMoneda</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>720</x><y>0</y><w>150</w><h>160</h></coordinates><panel_attributes>Servicio
+--
+idServicio
+nombre
+     (DEPEC, Netflix,
+     Personal Flow...)
+idTipoServicio</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>490</x><y>0</y><w>150</w><h>160</h></coordinates><panel_attributes>TipoServicio
+--
+idTipoServicio
+nombre
+     (Luz, Agua,  Gas,
+     Impuestos...)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>490</x><y>220</y><w>150</w><h>160</h></coordinates><panel_attributes>PagoServicio
+--
+idPagoServicio
+idMovimientoPesos
+idServicio
+codigoDePago
+numeroFactura
+fechaVencimiento
+fechaPago
+importe
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>190</x><y>570</y><w>150</w><h>160</h></coordinates><panel_attributes>OperacionMoneda
+--
+idOperacionMoneda
+nombre
+     (Compra de moneda,
+      Venta de moneda,
+      Transferencia...)
+porcentajeComision
+esDebito
+     (true / false)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>490</x><y>400</y><w>150</w><h>160</h></coordinates><panel_attributes>PlazoFijo
+--
+idInversion
+idMovimientoPesos
+fechaAlta
+fechaFin
+tasaInteres
+importeInicial
+importeFinal</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>260</x><y>340</y><w>150</w><h>160</h></coordinates><panel_attributes>MovimientoPesos
+--
+idMovimientoPesos
+idCuentaPesos
+fecha
+idOperacionPesos
+importe</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>170</x><y>20</y><w>110</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>90;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>630</x><y>20</y><w>110</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>90;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>200</x><y>20</y><w>80</w><h>390</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>60;370;10;230;60;10</additional_attributes></element><element><id>Relation</id><coordinates><x>170</x><y>310</y><w>110</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>90;110;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>630</x><y>20</y><w>110</w><h>280</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;260;60;260;90;10</additional_attributes></element><element><id>Relation</id><coordinates><x>400</x><y>260</y><w>110</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>90;10;10;110</additional_attributes></element><element><id>Relation</id><coordinates><x>400</x><y>360</y><w>110</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>90;80;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>400</x><y>350</y><w>110</w><h>280</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>90;260;50;240;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>330</x><y>590</y><w>180</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>160;90;70;60;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>630</x><y>609</y><w>110</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;60;90;10</additional_attributes></element></diagram>
