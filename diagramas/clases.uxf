@@ -1,19 +1,20 @@
-<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>260</x><y>0</y><w>150</w><h>160</h></coordinates><panel_attributes>CuentaPesos
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>0</x><y>30</y><w>150</w><h>160</h></coordinates><panel_attributes>CuentaPesos
 --
 idCuentaPesos
 idUsuario
 numeroCuenta
 CVU
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>30</x><y>0</y><w>150</w><h>160</h></coordinates><panel_attributes>Usuario
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>220</x><y>0</y><w>150</w><h>160</h></coordinates><panel_attributes>Usuario
 --
 idUsuario
 dni
 apellido
 nombre
 domicilio
+email
 imgDniFrente
 imgDniAtras
-passwordHash</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>720</x><y>590</y><w>150</w><h>170</h></coordinates><panel_attributes>Monedas
+passwordHash</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>640</x><y>540</y><w>150</w><h>170</h></coordinates><panel_attributes>Monedas
 --
 idMoneda
 nombreMoneda
@@ -23,7 +24,7 @@ simboloMoneda
 cotizaciónVenta
 cotizaciónCompra
 esCriptomoneda
-     (true / false)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>30</x><y>290</y><w>150</w><h>230</h></coordinates><panel_attributes>OperacionPesos
+     (true / false)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>370</y><w>150</w><h>230</h></coordinates><panel_attributes>OperacionPesos
 --
 idOperacionPesos
 nombre
@@ -38,25 +39,25 @@ nombre
       Criptomonedas...)
 esDebito
      (true / false)
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>490</x><y>590</y><w>150</w><h>160</h></coordinates><panel_attributes>MovimientoMoneda
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>430</x><y>570</y><w>150</w><h>140</h></coordinates><panel_attributes>MovimientoMoneda
 --
 idMovimientoMoneda
 idMovimientoPesos
 fecha
 idMoneda
 idOperacionMoneda
-importeMoneda</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>720</x><y>0</y><w>150</w><h>160</h></coordinates><panel_attributes>Servicio
+importeMoneda</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>620</x><y>70</y><w>150</w><h>160</h></coordinates><panel_attributes>Servicio
 --
 idServicio
 nombre
      (DEPEC, Netflix,
      Personal Flow...)
-idTipoServicio</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>490</x><y>0</y><w>150</w><h>160</h></coordinates><panel_attributes>TipoServicio
+idTipoServicio</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>620</x><y>290</y><w>150</w><h>160</h></coordinates><panel_attributes>TipoServicio
 --
 idTipoServicio
 nombre
      (Luz, Agua,  Gas,
-     Impuestos...)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>490</x><y>220</y><w>150</w><h>160</h></coordinates><panel_attributes>PagoServicio
+     Impuestos...)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>410</x><y>200</y><w>150</w><h>160</h></coordinates><panel_attributes>PagoServicio
 --
 idPagoServicio
 idMovimientoPesos
@@ -66,7 +67,23 @@ numeroFactura
 fechaVencimiento
 fechaPago
 importe
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>190</x><y>570</y><w>150</w><h>160</h></coordinates><panel_attributes>OperacionMoneda
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>10</x><y>750</y><w>150</w><h>60</h></coordinates><panel_attributes>
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>430</x><y>380</y><w>150</w><h>160</h></coordinates><panel_attributes>PlazoFijo
+--
+idInversion
+idMovimientoPesos
+fechaAlta
+fechaFin
+tasaInteres
+importeInicial
+importeFinal</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>210</x><y>300</y><w>150</w><h>160</h></coordinates><panel_attributes>MovimientoPesos
+--
+idMovimientoPesos
+idCuentaPesos
+fecha
+idOperacionPesos
+importe</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>140</x><y>20</y><w>100</w><h>60</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;40;80;10</additional_attributes></element><element><id>Relation</id><coordinates><x>760</x><y>160</y><w>60</w><h>180</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;40;10;40;160;10;160</additional_attributes></element><element><id>Relation</id><coordinates><x>140</x><y>50</y><w>90</w><h>320</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>70;300;40;300;40;80;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>140</x><y>370</y><w>90</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>70;10;10;30</additional_attributes></element><element><id>Relation</id><coordinates><x>550</x><y>90</y><w>90</w><h>190</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;170;50;170;50;10;70;10</additional_attributes></element><element><id>Relation</id><coordinates><x>350</x><y>240</y><w>80</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>60;10;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>350</x><y>320</y><w>100</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>80;110;50;110;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>350</x><y>310</y><w>100</w><h>310</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>80;290;40;290;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>340</x><y>580</y><w>110</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>90;80;50;80;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>570</x><y>560</y><w>90</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;80;50;80;70;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>200</x><y>560</y><w>150</w><h>160</h></coordinates><panel_attributes>OperacionMoneda
 --
 idOperacionMoneda
 nombre
@@ -75,18 +92,4 @@ nombre
       Transferencia...)
 porcentajeComision
 esDebito
-     (true / false)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>490</x><y>400</y><w>150</w><h>160</h></coordinates><panel_attributes>PlazoFijo
---
-idInversion
-idMovimientoPesos
-fechaAlta
-fechaFin
-tasaInteres
-importeInicial
-importeFinal</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>260</x><y>340</y><w>150</w><h>160</h></coordinates><panel_attributes>MovimientoPesos
---
-idMovimientoPesos
-idCuentaPesos
-fecha
-idOperacionPesos
-importe</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>170</x><y>20</y><w>110</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>90;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>630</x><y>20</y><w>110</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>90;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>200</x><y>20</y><w>80</w><h>390</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>60;370;10;230;60;10</additional_attributes></element><element><id>Relation</id><coordinates><x>170</x><y>310</y><w>110</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>90;110;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>630</x><y>20</y><w>110</w><h>280</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;260;60;260;90;10</additional_attributes></element><element><id>Relation</id><coordinates><x>400</x><y>260</y><w>110</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>90;10;10;110</additional_attributes></element><element><id>Relation</id><coordinates><x>400</x><y>360</y><w>110</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>90;80;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>400</x><y>350</y><w>110</w><h>280</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>90;260;50;240;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>330</x><y>590</y><w>180</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>160;90;70;60;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>630</x><y>609</y><w>110</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;60;90;10</additional_attributes></element></diagram>
+     (true / false)</panel_attributes><additional_attributes></additional_attributes></element></diagram>
