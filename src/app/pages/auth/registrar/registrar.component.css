@@ -1,5 +1,41 @@
-.auth-form {
-    background-color: rgba(232, 201, 201, 0.9);
-    padding: 1rem;
-    border-radius: 5px;
-  }
+
+/* .auth-form {
+  background-color: rgba(232, 201, 201, 0.9);
+  padding: 1rem;
+  border-radius: 5px;
+} */
+
+
+/* .formulario {
+    max-width: 300px;
+    margin: 30px auto;
+} */
+
+/* CLASES CSS DE ANGULAR 
+.ng-valid
+.ng-invalid
+.ng-depending
+.ng-pristine
+.ng-dirty
+.ng-untouched
+.ng-touched
+.ng-submitted
+*/
+
+.ng-valid[required], .ng-valid.required  {
+  border-left: 5px solid #42A948; /* green */
+}
+
+.ng-invalid:not(form)  {
+  border-left: 5px solid #a94442; /* red */
+}
+
+/* borde izquierdo green */
+/* .ng-valid:not(form) .ng-touched {
+  border-left: 5px #42a948 solid;
+} */
+
+  /* borde izquierdo rojo */
+/* .ng-invalid:not(form) .ng-touched {
+  border-left: 5px #a94442 solid;
+} */
